@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LoginUniversal</string>
+    <string name="vorud">ورود</string>
+    <string name="shomare_ya_namekarbary">شماره موبایل یا نام کاربری</string>
+    <string name="payam_resan_gap">پیام رسان گپ</string>
+    <string name="khadamat_harimkhosusy"><u>خدمات وحریم خصوصی</u></string>
+    <string name="jostoju">جستجو</string>
+</resources>
