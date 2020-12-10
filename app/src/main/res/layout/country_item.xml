@@ -4,14 +4,14 @@
     <data>
         <variable
             name="country"
-            type="com.example.multidex.data.model.Country" />
+            type="com.example.multidex.view.login.adapter.model.Country" />
 
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imageView7"
         android:layout_width="50dp"
         android:layout_height="30dp"
@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:src="@{country.flag}" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

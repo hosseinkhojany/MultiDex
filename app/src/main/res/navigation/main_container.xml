@@ -45,8 +45,8 @@
 
     <fragment
         android:id="@+id/countery_selection_dialog"
-        android:name="com.example.multidex.view.login.CountrySelectionDialog"
-        tools:layout="@layout/login_country_selection_fragment_dialog" >
+        android:name="com.example.multidex.view.login.CountrySelectionFragment"
+        tools:layout="@layout/login_country_selection_fragment" >
 
 
 <!--        <action-->

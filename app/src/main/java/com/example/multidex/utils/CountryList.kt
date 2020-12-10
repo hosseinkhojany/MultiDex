@@ -1,6 +1,6 @@
 ﻿package com.example.multidex.utils;
 
-import com.example.multidex.data.model.Country
+import com.example.multidex.view.login.adapter.model.Country
 import com.example.multidex.R
 
 class CountryList{

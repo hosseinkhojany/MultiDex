@@ -50,8 +50,7 @@ class LoginPhoneNumberFragment : Fragment() , View.OnClickListener {
                 findNavController().navigate(R.id.action_loginFragmentStep1_to_countery_selection_dialog)
             }
             views.languageSelection -> {
-                findNavController().navigate(LoginPhoneNumberFragmentDirections.
-                actionLoginFragmentStep1ToLanguageSelectionDialog())
+                findNavController().navigate(R.id.action_loginFragmentStep1_to_language_selection_dialog)
             }
             views.privatePolicy -> {
 

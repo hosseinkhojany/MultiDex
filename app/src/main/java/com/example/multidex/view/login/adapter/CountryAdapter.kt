@@ -6,7 +6,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.multidex.R
-import com.example.multidex.data.model.Country
+import com.example.multidex.view.login.adapter.model.Country
 import com.example.multidex.databinding.CountryItemBinding
 import com.example.multidex.utils.CountryList
 
