@@ -14,10 +14,7 @@ class LanguageSelectionDialog : BottomSheetDialogFragment() {
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        parentView = inflater.inflate(R.layout.login_language_selection_fragment_dialog , container , false);
-
-
-        return parentView
+       return inflater.inflate(R.layout.login_language_selection_fragment_dialog , container , false)
     }
 
 }

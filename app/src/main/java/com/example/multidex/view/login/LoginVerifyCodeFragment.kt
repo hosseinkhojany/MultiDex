@@ -16,7 +16,6 @@ class LoginVerifyCodeFragment : Fragment() {
 
     /* Validate SMS code and Login */
 
-    private val viewmodel: ViewModelLogin by activityViewModels()
     private lateinit var parentView: LoginLayoutCodeVerifyBinding
 
 
@@ -29,25 +28,6 @@ class LoginVerifyCodeFragment : Fragment() {
         parentView = DataBindingUtil.inflate(inflater ,R.layout.login_layout_code_verify
                 , container , false)
 
-
-        val timer = object: CountDownTimer(20000, 1000) {
-            override fun onTick(millisUntilFinished: Long) {
-                viewmodel.setCode(213123)
-            }
-
-            override fun onFinish() {}
-        }
-        timer.start()
-
-
-
-        activity?.let {
-            viewmodel.observableCode.observe(it, {
-
-
-
-            })
-        }
 
 
         return parentView.root

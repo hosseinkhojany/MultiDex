@@ -21,7 +21,10 @@
             app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_loginFragmentStep1_to_countery_selection_dialog"
-            app:destination="@id/countery_selection_dialog" />
+            app:destination="@id/countery_selection_dialog"
+
+
+            />
         <action
             android:id="@+id/action_loginFragmentStep1_to_language_selection_dialog"
             app:destination="@id/language_selection_dialog" />
@@ -32,12 +35,12 @@
         android:name="com.example.multidex.view.login.LoginVerifyCodeFragment"
         android:label="LoginFragmentStep2">
 
-<!--                <action-->
-<!--                    app:destination="@id/loginFragmentStep2"-->
-<!--                    app:enterAnim="@anim/slide_in_right"-->
-<!--                    app:exitAnim="@anim/slide_out_left"-->
-<!--                    app:popEnterAnim="@anim/slide_in_left"-->
-<!--                    app:popExitAnim="@anim/slide_out_right" />-->
+<!--        <action-->
+<!--            app:destination="@id/loginFragmentStep2"-->
+<!--            app:enterAnim="@anim/slide_in_right"-->
+<!--            app:exitAnim="@anim/slide_out_left"-->
+<!--            app:popEnterAnim="@anim/slide_in_left"-->
+<!--            app:popExitAnim="@anim/slide_out_right" />-->
     </fragment>
 
     <fragment
@@ -58,13 +61,6 @@
         android:id="@+id/language_selection_dialog"
         android:name="com.example.multidex.view.login.LanguageSelectionDialog"
         android:label="DialogLanugage">
-
-<!--        <action-->
-<!--            app:destination="@id/loginFragmentStep2"-->
-<!--            app:enterAnim="@anim/slide_in_right"-->
-<!--            app:exitAnim="@anim/slide_out_left"-->
-<!--            app:popEnterAnim="@anim/slide_in_left"-->
-<!--            app:popExitAnim="@anim/slide_out_right" />-->
     </dialog>
 
 </navigation>

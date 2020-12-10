@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="adapter"
+            type="com.example.multidex.view.login.adapter.CountryAdapter" />
+    </data>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/editTextTextPersonName"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
-        android:background="@drawable/rounded_textview"
+        android:background="@drawable/rounded_default"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -25,9 +33,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@null"
+            android:hint="@string/jostoju"
             android:inputType="phone"
             android:maxLines="1"
-            android:hint="@string/jostoju"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -36,18 +44,21 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/countrys"
         android:layout_width="match_parent"
-        android:layout_height="0.dp"
+        android:layout_height="0dp"
         android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
-        tools:listitem="@layout/country_item"
+        app:adapter="@{adapter}"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+        tools:listitem="@layout/country_item" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
