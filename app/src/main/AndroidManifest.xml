@@ -16,7 +16,7 @@
         android:supportsRtl="false"
         android:theme="@style/Theme.LoginUniversal">
 
-        <activity android:name=".view.singleActivity.HostActivity">
+        <activity android:name=".ui.singleActivity.HostActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

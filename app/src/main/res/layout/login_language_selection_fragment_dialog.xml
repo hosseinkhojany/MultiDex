@@ -3,7 +3,7 @@
     <data>
         <variable
             name="adapter"
-            type="com.example.multidex.view.login.adapter.ArrayAdapterr" />
+            type="com.example.multidex.ui.login.adapter.LanguageAdapter" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -17,6 +17,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rec_language"
         android:layout_width="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_height="400dp"
         app:adapter="@{adapter}"
         app:layout_constraintBottom_toBottomOf="parent"

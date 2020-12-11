@@ -9,7 +9,7 @@
 
         <variable
             name="vm"
-            type="com.example.multidex.view.login.ViewModelLogin" />
+            type="com.example.multidex.ui.login.ViewModelLogin" />
     </data>
 
 
@@ -82,7 +82,7 @@
 
 
 
-    <com.example.multidex.view.widgets.RoundedButtonFarsi
+    <com.example.multidex.ui.widgets.RoundedButtonFarsi
         android:id="@+id/button2"
         android:layout_width="120dp"
         android:layout_height="wrap_content"

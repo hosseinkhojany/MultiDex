@@ -1,26 +1,27 @@
-package com.example.multidex.view.login.adapter
+package com.example.multidex.ui.login.adapter
 
+import android.content.Context
+import android.graphics.BitmapFactory
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.multidex.R
-import com.example.multidex.view.login.adapter.model.Country
+import com.example.multidex.ui.login.adapter.model.Country
 import com.example.multidex.databinding.CountryItemBinding
-import com.example.multidex.utils.CountryList
+import com.example.multidex.utils.COUNTRIES
+class CountryAdapter(private val context: Context) : RecyclerView.Adapter<CountryAdapter.CountryAdapterViewHolder>() {
 
-class CountryAdapter : RecyclerView.Adapter<CountryAdapter.CountryAdapterViewHolder>() {
-
-    val countryList:List<Country> = CountryList.COUNTRIES()
+    private var countryList:MutableList<Country> = COUNTRIES as MutableList<Country>
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryAdapterViewHolder {
-        val inflater = LayoutInflater.from(parent.context)
+        val inflater = LayoutInflater.from(context)
         val binding = DataBindingUtil.inflate<CountryItemBinding>(inflater ,
         R.layout.country_item , parent , false)
 
         return CountryAdapterViewHolder(binding).apply {
             binding.root.setOnClickListener {
-                Toast.makeText(parent.context, "Toast", Toast.LENGTH_SHORT).show()
+
             }
         }
     }
@@ -28,8 +29,15 @@ class CountryAdapter : RecyclerView.Adapter<CountryAdapter.CountryAdapterViewHol
     override fun onBindViewHolder(holder: CountryAdapterViewHolder, position: Int) {
         holder.binding.apply {
             country = countryList[position]
+            imageView7.setImageBitmap(BitmapFactory.decodeResource(context.resources , countryList[position].flag))
             executePendingBindings()
         }
+    }
+
+    fun setListSearch(list: List<Country>) {
+        countryList = mutableListOf()
+        countryList.addAll(list)
+        notifyDataSetChanged()
     }
 
     override fun getItemCount() = countryList.size

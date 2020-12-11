@@ -1,4 +1,4 @@
-package com.example.multidex.view.widgets
+package com.example.multidex.ui.widgets
 
 import android.content.Context
 import android.graphics.Color

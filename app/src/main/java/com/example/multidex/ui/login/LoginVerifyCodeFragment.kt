@@ -1,14 +1,12 @@
-package com.example.multidex.view.login
+package com.example.multidex.ui.login
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import com.example.multidex.R
 import com.example.multidex.databinding.LoginLayoutCodeVerifyBinding
 

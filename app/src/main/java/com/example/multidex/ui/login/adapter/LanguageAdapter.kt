@@ -1,4 +1,4 @@
-package com.example.multidex.view.login.adapter
+package com.example.multidex.ui.login.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,14 +7,20 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.multidex.R
 import com.example.multidex.databinding.LanguageItemBinding
-import com.example.multidex.utils.LanguageList
-import com.example.multidex.view.login.adapter.model.Language
+import com.example.multidex.ui.login.adapter.model.Language
+import com.example.multidex.utils.LANGUAGES
 
 class LanguageAdapter : RecyclerView.Adapter<LanguageAdapter.LanguageAdapterViewHolder>() {
 
-    val languages:List<Language> = LanguageList.LANGUAGES()
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LanguageAdapterViewHolder {
+    //list language
+    val languages:List<Language> = LANGUAGES
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):
+            LanguageAdapterViewHolder {
+
+
         val inflater = LayoutInflater.from(parent.context)
+
         val binding = DataBindingUtil.inflate<LanguageItemBinding>(inflater ,
                 R.layout.language_item , parent , false)
 

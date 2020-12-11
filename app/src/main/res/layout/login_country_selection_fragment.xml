@@ -5,7 +5,10 @@
     <data>
         <variable
             name="adapter"
-            type="com.example.multidex.view.login.adapter.CountryAdapter" />
+            type="com.example.multidex.ui.login.adapter.CountryAdapter" />
+        <variable
+            name="vm"
+            type="com.example.multidex.ui.login.country_selection.CountrySelectionViewModel" />
     </data>
 
 
@@ -29,7 +32,7 @@
 
 
         <EditText
-            android:id="@+id/number"
+            android:id="@+id/county_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@null"
@@ -52,7 +55,9 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:adapter="@{adapter}"
+        app:adapterSearchList="@{vm.countryListLiveData}"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

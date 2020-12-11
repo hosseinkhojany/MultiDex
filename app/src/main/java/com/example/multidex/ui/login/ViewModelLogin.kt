@@ -1,4 +1,4 @@
-package com.example.multidex.view.login
+package com.example.multidex.ui.login
 
 import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable

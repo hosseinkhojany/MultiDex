@@ -22,11 +22,11 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/frag1"
-            android:icon="@drawable/ic_launcher_foreground"
+            android:icon="@drawable/ic_germany"
             android:title="Frag2" />
         <item
             android:id="@+id/frag2"
-            android:icon="@drawable/ic_launcher_foreground"
+            android:icon="@drawable/ic_germany"
             android:title="Frag3" />
     </group>
 </menu>

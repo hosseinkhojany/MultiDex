@@ -1,12 +1,9 @@
 ﻿package com.example.multidex.utils;
 
-import com.example.multidex.view.login.adapter.model.Country
+import com.example.multidex.ui.login.adapter.model.Country
 import com.example.multidex.R
 
-class CountryList{
-    companion object{
-        fun COUNTRIES(): List<Country> {
-            return listOf<Country>(
+val COUNTRIES: List<Country> = listOf<Country>(
                     Country("AD", "Andorra", "+376", R.raw.flag_ad, "EUR"),
                     Country("AE", "United Arab Emirates", "+971", R.raw.flag_ae, "AED"),
                     Country("AF", "Afghanistan", "+93", R.raw.flag_af, "AFN"),
@@ -259,6 +256,5 @@ class CountryList{
                     Country("ZM", "Zambia", "+260", R.raw.flag_zm, "ZMW"),
                     Country("ZW", "Zimbabwe", "+263", R.raw.flag_zw, "USD")
             )
-        }
-    }
-}
+
+

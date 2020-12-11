@@ -1,4 +1,4 @@
-package com.example.multidex.view.singleActivity
+package com.example.multidex.ui.singleActivity
 
 import android.Manifest
 import android.os.Bundle

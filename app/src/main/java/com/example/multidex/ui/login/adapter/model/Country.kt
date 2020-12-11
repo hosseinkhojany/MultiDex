@@ -1,4 +1,4 @@
-package com.example.multidex.view.login.adapter.model
+package com.example.multidex.ui.login.adapter.model
 
 data class Country(val coun: String ,
                    val country_name: String,
