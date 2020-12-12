@@ -56,7 +56,7 @@
             app:srcCompat="@drawable/ic_drop_down_icon" />
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/country_name_lable"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ایران"

@@ -6,9 +6,7 @@
         <variable
             name="adapter"
             type="com.example.multidex.ui.login.adapter.CountryAdapter" />
-        <variable
-            name="vm"
-            type="com.example.multidex.ui.login.country_selection.CountrySelectionViewModel" />
+
     </data>
 
 
@@ -37,7 +35,7 @@
             android:layout_height="wrap_content"
             android:background="@null"
             android:hint="@string/jostoju"
-            android:inputType="phone"
+            android:inputType="text"
             android:maxLines="1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -57,7 +55,6 @@
         android:layout_marginRight="15dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:adapter="@{adapter}"
-        app:adapterSearchList="@{vm.countryListLiveData}"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

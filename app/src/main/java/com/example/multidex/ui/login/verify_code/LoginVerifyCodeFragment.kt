@@ -1,4 +1,4 @@
-package com.example.multidex.ui.login
+package com.example.multidex.ui.login.verify_code
 
 import android.annotation.SuppressLint
 import android.os.Bundle

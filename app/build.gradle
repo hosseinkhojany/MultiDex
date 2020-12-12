@@ -133,4 +133,10 @@ dependencies {
 
     //muiltidex
     implementation 'com.android.support:multidex:1.0.3'
+
+
+    //annotations
+    implementation 'androidx.annotation:annotation:1.1.0'
+
+
 }

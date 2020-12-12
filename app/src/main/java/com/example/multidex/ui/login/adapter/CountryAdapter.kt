@@ -4,14 +4,15 @@ import android.content.Context
 import android.graphics.BitmapFactory
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.multidex.R
-import com.example.multidex.ui.login.adapter.model.Country
 import com.example.multidex.databinding.CountryItemBinding
+import com.example.multidex.ui.login.adapter.model.Country
 import com.example.multidex.utils.COUNTRIES
-class CountryAdapter(private val context: Context) : RecyclerView.Adapter<CountryAdapter.CountryAdapterViewHolder>() {
+
+class CountryAdapter(private val context: Context) :
+    RecyclerView.Adapter<CountryAdapter.CountryAdapterViewHolder>() {
 
     private var countryList:MutableList<Country> = COUNTRIES as MutableList<Country>
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryAdapterViewHolder {
@@ -21,6 +22,8 @@ class CountryAdapter(private val context: Context) : RecyclerView.Adapter<Countr
 
         return CountryAdapterViewHolder(binding).apply {
             binding.root.setOnClickListener {
+
+//                findNavController().navigate(R.id.action_loginFragmentStep1_to_countery_selection_dialog)
 
             }
         }
@@ -37,6 +40,11 @@ class CountryAdapter(private val context: Context) : RecyclerView.Adapter<Countr
     fun setListSearch(list: List<Country>) {
         countryList = mutableListOf()
         countryList.addAll(list)
+        notifyDataSetChanged()
+    }
+    fun setListReset() {
+        countryList = mutableListOf()
+        countryList.addAll(COUNTRIES)
         notifyDataSetChanged()
     }
 

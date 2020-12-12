@@ -1,4 +1,4 @@
-package com.example.multidex.ui.login.country_selection
+package com.example.multidex.ui.login.shared_view_models
 
 import androidx.annotation.MainThread
 import androidx.annotation.WorkerThread
@@ -10,10 +10,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 
-class CountrySelectionViewModel: ViewModelDataEmitter(){
+class CountrySelectionViewModel: ViewModelDataEmitter() {
 
     val countryListLiveData: LiveData<List<Country>>
-    private var countryFetchLiveData: MutableLiveData<String> = MutableLiveData("")
+    private var countryFetchLiveData = MutableLiveData<String>()
 
     init {
         countryListLiveData = countryFetchLiveData.switchMap {
@@ -21,25 +21,37 @@ class CountrySelectionViewModel: ViewModelDataEmitter(){
                 queryExecute(it).asLiveData()
             }
         }
+
     }
 
     @MainThread
-    fun realTimeSearch(query: String){
+    fun realTimeSearch(query: String) {
         countryFetchLiveData.value = query
     }
 
     @WorkerThread
     suspend fun queryExecute(query: String) = flow {
 
-        var listSearch = mutableListOf<Country>()
+        val listSearch = mutableListOf<Country>()
+        //start with first load
         COUNTRIES.forEach { country ->
 
-            if (country.country_code.contains(query)){
+            if (country.country_name.startsWith(query, true) ||
+                country.country_code.startsWith(query, true)
+            ) {
                 listSearch.add(country)
             }
         }
-
-
+        //content with second load
+        COUNTRIES.forEach { country ->
+            if (country.country_name.contains(query, true) ||
+                country.country_code.contains(query, true)
+            ) {
+                if (!listSearch.contains(country)) {
+                    listSearch.add(country)
+                }
+            }
+        }
         emit(listSearch as List<Country>)
 
     }.flowOn(Dispatchers.IO)

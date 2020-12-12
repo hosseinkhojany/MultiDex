@@ -1,4 +1,4 @@
-package com.example.multidex.ui.login
+package com.example.multidex.ui.login.phone_number
 
 import android.annotation.SuppressLint
 import android.graphics.Color
@@ -13,15 +13,17 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.multidex.R
 import com.example.multidex.databinding.LoginLayoutPhoneNumberBinding
+import com.example.multidex.ui.login.shared_view_models.CountrySelectionViewModel
 
 
 class LoginPhoneNumberFragment : Fragment() , View.OnClickListener {
 
     /* Get Number And pass it to the LoginFragmentStep2 */
 
-    private val viewmodel: ViewModelLogin by activityViewModels()
     private lateinit var views : LoginLayoutPhoneNumberBinding
 
+    private val countrySelectionViewModel: CountrySelectionViewModel
+            by activityViewModels<CountrySelectionViewModel>()
 
 
     @SuppressLint("ShowToast")
@@ -32,9 +34,9 @@ class LoginPhoneNumberFragment : Fragment() , View.OnClickListener {
     ): View? {
         views = LoginLayoutPhoneNumberBinding.inflate(inflater, container, false)
 
+
+
         UiBehavior()
-
-
 
         return views.root
     }
@@ -84,6 +86,12 @@ class LoginPhoneNumberFragment : Fragment() , View.OnClickListener {
             }
         }
 
+
+
+        views.countryCode.addTextChangedListener{
+
+
+        }
 
         views.gotoVerifycode.setOnClickListener(this)
         views.countrySelection.setOnClickListener(this)
